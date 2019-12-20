@@ -23,7 +23,7 @@ function createWindow () {
     width: 600,
     webPreferences: {webSecurity: false},
   });
-  mainWindow.webContents.closeDevTools()
+  // mainWindow.webContents.closeDevTools()
   mainWindow.loadURL(winURL);
 
   mainWindow.on('closed', () => {

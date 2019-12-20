@@ -41,6 +41,14 @@
             // 保存数据
             save: function () {
                 // 检查参数
+                if (!this.formData.account){
+                    this.$message.error('请输入账号');
+                    return;
+                }
+                if (!this.formData.password){
+                    this.$message.error('请输入密码');
+                    return;
+                }
                 var list = this.$store.state.accountList;
                 var has = false;
                 for (let i = 0; i < list.length; i++) {

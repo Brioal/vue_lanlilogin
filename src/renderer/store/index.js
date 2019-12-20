@@ -14,9 +14,9 @@ export default new Vuex.Store({
     ],
     state: {
         // 账户列表
-        accountList: [
-
-        ],
+        accountList: [],
+        // 自动登录
+        autoLogin: false,
         // 选中的下标
         selectAccountIndex: 0
     },
@@ -26,6 +26,9 @@ export default new Vuex.Store({
         },
         setSelectIndex(state, playload) {
             state.selectAccountIndex = playload;
+        },
+        setAutoLogin(state, playload) {
+            state.autoLogin = playload;
         }
     },
     strict: process.env.NODE_ENV !== 'production'
